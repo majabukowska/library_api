@@ -37,3 +37,29 @@ http://localhost:8000/docs
 ```bash
 pytest
 ```
+
+## Example books
+
+```json
+{
+  "serial_number": "100001",
+  "title": "Clean Code",
+  "author": "Robert C. Martin"
+}
+```
+
+```json
+{
+  "serial_number": "100002",
+  "title": "The Pragmatic Programmer",
+  "author": "Andrew Hunt"
+}
+```
+
+```json
+{
+  "serial_number": "100003",
+  "title": "Design Patterns",
+  "author": "Erich Gamma"
+}
+```
