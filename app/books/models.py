@@ -1,4 +1,6 @@
-from sqlalchemy import Boolean, Integer, String
+from datetime import datetime
+
+from sqlalchemy import Boolean, DateTime, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -13,6 +15,7 @@ class Book(Base):
         String(6),
         unique=True,
         nullable=False,
+        index=True,
     )
 
     title: Mapped[str] = mapped_column(
@@ -28,9 +31,15 @@ class Book(Base):
     is_borrowed: Mapped[bool] = mapped_column(
         Boolean,
         default=False,
+        nullable=False,
     )
 
     borrowed_by: Mapped[str | None] = mapped_column(
         String(6),
+        nullable=True,
+    )
+
+    borrowed_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True),
         nullable=True,
     )
