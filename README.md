@@ -21,6 +21,8 @@ Library management API built with FastAPI, PostgreSQL and Docker Compose.
 ## Run Project
 
 ```bash
+cd library-api
+cp .env.example .env
 docker compose up --build
 ```
 
